@@ -27,3 +27,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### gitignore ###
+.idea/
+MidTerm.iml
+.gitignore
