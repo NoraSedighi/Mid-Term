@@ -36,6 +36,7 @@ public class Main {
         testInvalidCreation("", "emptyname");
         testInvalidCreation("short", "pass");
         testInvalidCreation("john_doe", "newpass");
+        testInvalidCreation("david", "");
     }
 
     private static void testInvalidCreation(String username, String password) {
