@@ -49,7 +49,7 @@ public class User {
         if (username.trim().isEmpty())
             throw new InvalidOperationException("Username cannot be empty");
 
-        for(User user : allUsers)
+        for (User user : allUsers)
             if (user != this && username.equals(user.getUsername()))
                 throw new InvalidOperationException("Username already exists");
 
@@ -57,7 +57,10 @@ public class User {
     }
 
     public void setPassword(String password) throws InvalidOperationException {
-        if(password.length() < 8)
+        if (password.isEmpty())
+            throw new InvalidOperationException("Password cannot be empty");
+
+        if (password.length() < 8)
             throw new InvalidOperationException("Password must be at least 8 characters long");
         this.password = password;
     }
